@@ -191,7 +191,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       } else if (role?.name === 'INVENTORY_MANAGER') {
         setActiveTab('inventory');
       } else {
-        setActiveTab('dashboard');
+        setActiveTab('pos');
       }
     }
   }, [isAuthenticated, role]);
