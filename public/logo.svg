@@ -1,0 +1,147 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07111F"/>
+      <stop offset="100%" stop-color="#0A1525"/>
+    </linearGradient>
+    
+    <!-- Gold Gradient - Metallic -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C15A"/>
+      <stop offset="25%" stop-color="#D9AA3F"/>
+      <stop offset="50%" stop-color="#C99A35"/>
+      <stop offset="75%" stop-color="#D9AA3F"/>
+      <stop offset="100%" stop-color="#B8862F"/>
+    </linearGradient>
+    
+    <!-- Gold Highlight Gradient -->
+    <linearGradient id="goldHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8C15A"/>
+      <stop offset="100%" stop-color="#D9AA3F"/>
+    </linearGradient>
+    
+    <!-- Soft Shadow -->
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    
+    <!-- Inner Glow for Receipt -->
+    <filter id="innerGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    
+    <!-- Bevel Effect -->
+    <filter id="bevel" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="3" specularConstant="0.5" specularExponent="20" lighting-color="#E8C15A" result="specular">
+        <fePointLight x="-500" y="-500" z="200"/>
+      </feSpecularLighting>
+      <feComposite in="specular" in2="SourceAlpha" operator="in" result="specular"/>
+      <feComposite in="SourceGraphic" in2="specular" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bgGradient)" rx="32"/>
+  
+  <!-- Main Logo Group - Centered with proper proportions -->
+  <g transform="translate(256, 180)" filter="url(#softShadow)">
+    
+    <!-- Unified Golden Arabic-inspired Shape with integrated elements -->
+    <g filter="url(#bevel)">
+      <!-- Main Golden Arabic Form - stylized "ح" shape that encompasses all elements -->
+      <path d="M -90 -80 
+               C -90 -100, -65 -110, -40 -110 
+               C -15 -110, 10 -100, 30 -80 
+               L 30 30 
+               C 30 50, 18 62, 0 68 
+               L -45 85 
+               C -75 95, -90 115, -90 140 
+               L -90 160 
+               C -90 195, -50 210, 0 210 
+               C 60 210, 100 185, 105 160 
+               C 107 152, 98 145, 88 146 
+               C 76 147, 45 170, 0 170 
+               C -45 170, -70 150, -70 125 
+               L -70 105 
+               C -70 92, -58 85, -45 82 
+               L 45 82 
+               C 62 82, 75 95, 72 110 
+               C 68 125, 52 132, 35 128 
+               L -35 128 
+               C -50 128, -62 118, -62 105 
+               C -62 92, -50 84, -35 84 
+               L 35 84 
+               C 45 84, 52 92, 50 100 
+               C 48 108, 40 113, 30 113 
+               L -55 113 
+               C -80 113, -90 95, -90 75 
+               Z" 
+            fill="url(#goldGradient)" 
+            stroke="#E8C15A" 
+            stroke-width="1.5"
+            opacity="0.95"/>
+      
+      <!-- White Receipt - seamlessly integrated into the golden shape -->
+      <path d="M -35 -55 
+               C -35 -70, -15 -75, 15 -75 
+               C 45 -75, 65 -70, 65 -55 
+               L 65 45 
+               L 60 39 L 55 45 L 50 39 L 45 45 L 40 39 L 35 45 L 30 39 L 25 45 L 20 39 L 15 45 
+               L 10 39 L 5 45 L 0 39 L -5 45 L -10 39 L -15 45 L -20 39 L -25 45 L -30 39 L -35 45 
+               Z" 
+            fill="#F7F7F5" 
+            filter="url(#innerGlow)"/>
+      
+      <!-- Receipt Top Curved Edge -->
+      <path d="M -35 -55 C -35 -70, -15 -75, 15 -75 C 45 -75, 65 -70, 65 -55 C 65 -45, 45 -48, 15 -48 C -15 -48, -35 -45, -35 -55 Z" 
+            fill="#E8E8E6"/>
+      
+      <!-- Receipt Header Lines -->
+      <rect x="-25" y="-40" width="38" height="5" rx="2.5" fill="#07111F"/>
+      <rect x="-25" y="-28" width="28" height="4" rx="2" fill="#07111F"/>
+      
+      <!-- Bold Dark Checkmark -->
+      <path d="M 8 10 L 20 22 L 45 -8" 
+            fill="none" 
+            stroke="#07111F" 
+            stroke-width="7" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"/>
+      
+      <!-- Ascending Bar Chart - 4 bars representing growth -->
+      <rect x="-25" y="30" width="7" height="12" rx="3.5" fill="url(#goldHighlight)"/>
+      <rect x="-16" y="18" width="7" height="24" rx="3.5" fill="url(#goldHighlight)"/>
+      <rect x="-7" y="6" width="8" height="36" rx="4" fill="url(#goldHighlight)"/>
+      <rect x="3" y="-6" width="8" height="48" rx="4" fill="url(#goldHighlight)"/>
+    </g>
+    
+    <!-- Smooth Golden Curved Base -->
+    <path d="M -70 175 Q 0 200, 70 175" 
+          fill="none" 
+          stroke="url(#goldGradient)" 
+          stroke-width="5" 
+          stroke-linecap="round"
+          filter="url(#softShadow)"/>
+  </g>
+  
+  <!-- Arabic Wordmark - centered below icon -->
+  <text x="256" y="400" 
+        text-anchor="middle" 
+        font-family="Arial, sans-serif" 
+        font-size="64" 
+        font-weight="bold" 
+        fill="#F7F7F5"
+        filter="url(#softShadow)">حاسبو</text>
+  
+  <!-- English Wordmark - centered below Arabic -->
+  <text x="256" y="460" 
+        text-anchor="middle" 
+        font-family="Arial, sans-serif" 
+        font-size="28" 
+        font-weight="bold" 
+        fill="#D9AA3F" 
+        letter-spacing="8"
+        filter="url(#softShadow)">HĀSEBO</text>
+</svg>
